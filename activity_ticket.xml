@@ -1,0 +1,51 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← Back"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="18dp" app:cardElevation="6dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <!--  Ticket header  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/park_blue" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PARKONSPOT DIGITAL PASS" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvTicketNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:fontFamily="monospace" android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:id="@+id/tvTimerTitle" style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvTimer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="monospace" android:textColor="@color/park_blue" android:textSize="32sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvTimerSub" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/park_muted" android:textSize="13sp"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp" android:background="#DDE3EA"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="PARKING SPACE"/>
+                    <TextView android:id="@+id/tvSpace" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SLOT"/>
+                    <TextView android:id="@+id/tvSlot" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="PLATE NUMBER"/>
+                    <TextView android:id="@+id/tvPlate" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="VEHICLE"/>
+                    <TextView android:id="@+id/tvVehicle" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="BOOKED DURATION"/>
+                    <TextView android:id="@+id/tvDuration" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="BOOKED WINDOW"/>
+                    <TextView android:id="@+id/tvScheduled" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp" android:background="#DDE3EA"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="ENTRANCE"/>
+                    <TextView android:id="@+id/tvEntry" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="EXIT"/>
+                    <TextView android:id="@+id/tvExit" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="TIME PARKED"/>
+                    <TextView android:id="@+id/tvTimeParked" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp" android:background="#DDE3EA"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="BASE FEE"/>
+                    <TextView android:id="@+id/tvBaseFee" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="OVERSTAY FEE"/>
+                    <TextView android:id="@+id/tvOverstay" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    <TextView style="@style/TicketLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="TOTAL FEE"/>
+                    <TextView android:id="@+id/tvTotal" style="@style/TicketValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/park_blue" android:textSize="26sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:id="@+id/tvHint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:textColor="@color/park_muted"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnCheckIn" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="14dp" android:backgroundTint="@color/park_green" android:text="Enter parking (entrance)"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnCheckOut" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="14dp" android:text="Exit parking"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnCancel" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="24dp" android:text="Cancel booking"/>
+    </LinearLayout>
+</ScrollView>

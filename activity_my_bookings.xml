@@ -1,0 +1,15 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← Back"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My tickets" android:textColor="@color/park_text" android:textSize="24sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Paid parking bookings" android:textColor="@color/park_blue" android:textSize="16sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvNoBookings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="No bookings yet. Tap a blue dot on the map to book a slot." android:textColor="@color/park_muted"/>
+        <LinearLayout android:id="@+id/containerBookings" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="Vehicles in free parking" android:textColor="@color/park_green" android:textSize="16sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvNoFree" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="No vehicle is parked in a free lot." android:textColor="@color/park_muted"/>
+        <LinearLayout android:id="@+id/containerFree" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="Parking log (latest 30)" android:textColor="@color/park_text" android:textSize="16sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvNoLogs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Nothing logged yet." android:textColor="@color/park_muted"/>
+        <LinearLayout android:id="@+id/containerLogs" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:orientation="vertical"/>
+    </LinearLayout>
+</ScrollView>

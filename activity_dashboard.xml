@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <org.maplibre.android.maps.MapView android:id="@+id/mapView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <!--  Top panel: greeting, buttons, filter chips, legend  -->
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="top" android:layout_margin="10dp" app:cardCornerRadius="16dp" app:cardElevation="6dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="14dp" android:paddingTop="6dp" android:paddingEnd="6dp" android:paddingBottom="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:id="@+id/tvWelcome" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:ellipsize="end" android:maxLines="1" android:text="Hi" android:textColor="@color/park_text" android:textSize="16sp" android:textStyle="bold"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnMyTickets" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My tickets"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logout"/>
+            </LinearLayout>
+            <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroupFilter" android:layout_width="match_parent" android:layout_height="wrap_content" app:selectionRequired="true" app:singleSelection="true">
+                <com.google.android.material.chip.Chip android:id="@+id/chipAll" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="All"/>
+                <com.google.android.material.chip.Chip android:id="@+id/chipPaid" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Paid"/>
+                <com.google.android.material.chip.Chip android:id="@+id/chipFree" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Free"/>
+            </com.google.android.material.chip.ChipGroup>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Paid" android:textColor="#1565C0" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="● Free" android:textColor="#2E7D32" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="● Full" android:textColor="#757575" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <!--  Bottom card: appears when a parking dot is tapped  -->
+    <com.google.android.material.card.MaterialCardView android:id="@+id/cardSpace" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:layout_margin="10dp" android:visibility="gone" app:cardCornerRadius="20dp" app:cardElevation="10dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:id="@+id/tvSpaceName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textColor="@color/park_text" android:textSize="18sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvSpaceType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/btnCloseCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="6dp" android:text="✕" android:textColor="@color/park_muted" android:textSize="18sp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tvSpaceBarangay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/park_muted"/>
+            <TextView android:id="@+id/tvSpaceAvailability" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="15sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvSpaceDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="@color/park_text"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSpaceAction" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="12dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

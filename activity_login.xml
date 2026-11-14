@@ -1,0 +1,14 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ParkOnSpot" android:textColor="@color/park_blue" android:textSize="34sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32dp" android:text="Find parking in Nasugbu, Batangas" android:textColor="@color/park_muted" android:textSize="15sp"/>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilEmail" style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilPassword" style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="Password" app:endIconMode="password_toggle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnLogin" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="24dp" android:text="Log in"/>
+        <TextView android:id="@+id/tvGoRegister" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:padding="16dp" android:text="No account yet? Register" android:textColor="@color/park_blue" android:textStyle="bold"/>
+    </LinearLayout>
+</ScrollView>

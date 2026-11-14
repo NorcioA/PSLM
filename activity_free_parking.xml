@@ -1,0 +1,22 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← Back"/>
+        <TextView android:id="@+id/tvSpaceName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/park_text" android:textSize="22sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvSpaceInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="@color/park_muted"/>
+        <TextView android:id="@+id/tvFreeNote" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textColor="@color/park_green" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Vehicle details" android:textColor="@color/park_green" android:textSize="16sp" android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Plate number (e.g. ABC 1234)">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPlate" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapCharacters"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Type of vehicle" android:textColor="@color/park_muted"/>
+        <Spinner android:id="@+id/spinnerVehicleType" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:hint="Vehicle color (e.g. Red)">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnRandom" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Use a random vehicle"/>
+        <TextView android:id="@+id/tvError" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textColor="#C62828" android:textStyle="bold" android:visibility="gone"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnParkNow" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="12dp" android:backgroundTint="@color/park_green" android:text="Park now (free)"/>
+        <TextView android:id="@+id/tvActiveTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:textColor="@color/park_text" android:textSize="16sp" android:textStyle="bold"/>
+        <LinearLayout android:id="@+id/containerActive" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:orientation="vertical"/>
+    </LinearLayout>
+</ScrollView>
